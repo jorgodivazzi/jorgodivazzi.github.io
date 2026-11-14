@@ -97,7 +97,7 @@
     .feature-visual { position: relative; min-height: 340px; display: grid; place-items: center; overflow: hidden; isolation: isolate; background: linear-gradient(135deg, #e5eee4, #d3e1d4 56%, #e6eadc); }
     .feature-visual::before { content: ""; position: absolute; z-index: -1; width: 380px; height: 380px; right: -44px; bottom: -210px; border-radius: 50%; background: rgba(255,255,255,.82); }
     .feature-glow { position: absolute; z-index: -1; width: 250px; height: 250px; border-radius: 50%; background: rgba(112,162,125,.32); filter: blur(72px); }
-    .feature-logo { width: 116px; height: 116px; object-fit: contain; border-radius: 30px; box-shadow: 0 28px 60px rgba(32,60,42,.18); transform: translateY(-8px) rotate(-4deg); }
+    .feature-logo { width: 116px; height: 116px; object-fit: contain; border-radius: 30px; box-shadow: 0 28px 60px rgba(32,60,42,.18); transform: translateY(-8px); }
     .feature-index { position: absolute; top: 24px; left: 26px; color: #5f7866; font-size: 9px; font-weight: 800; letter-spacing: .15em; }
     .feature-side-note { position: absolute; right: 26px; bottom: 24px; color: #5d7563; font-size: 10px; font-weight: 650; }
 
@@ -250,6 +250,7 @@
           <span class="feature-index">01 / TRAINING</span><span class="feature-glow" aria-hidden="true"></span>
           <img class="feature-logo" src="assets/gym.svg" alt="GÜYM App-Icon">
           <span class="feature-side-note">Training, Fortschritt, Pause.</span>
+          <div class="feature-controls" aria-label="Projektvorschau steuern"><button type="button" data-feature-prev aria-label="Vorheriges Projekt">‹</button><button type="button" data-feature-next aria-label="Nächstes Projekt">›</button></div>
         </div>
       </article>
 
@@ -347,6 +348,7 @@
         textObserver.observe(textTarget);
       }
       let scheduled = false;
+      bar.classList.toggle('is-docked', window.scrollY > 52);
       window.addEventListener('scroll', () => {
         if (scheduled) return;
         scheduled = true;
