@@ -1,0 +1,21 @@
+/* Gemeinsames Format für alle Projekt-App-Icons: volle Icon-Fläche, Apple-artige Ecken, kein CSS-Rahmen. */
+:root { --project-icon-radius: 22.5%; }
+.project-art img,
+.collage-icon img,
+.feature-logo,
+.modal-logo-wrap img {
+  display: block;
+  object-fit: cover;
+  padding: 0;
+  border: 0;
+  border-radius: var(--project-icon-radius);
+  background: transparent;
+  box-shadow: none;
+}
+.project-art img { position:relative; z-index:1; width:80px; height:80px; }
+.collage-icon img { width: 78px; height: 78px; }
+.feature-logo { width: 112px; height: 112px; }
+.modal-logo-wrap img { width: 100%; height: 100%; }
+@media (max-width: 760px) {
+  .collage-icon img { width: 62px; height: 62px; }
+}

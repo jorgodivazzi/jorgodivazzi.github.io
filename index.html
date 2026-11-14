@@ -69,13 +69,13 @@
     .collage-footer { bottom: 22px; color: #63766a; font-size: 10px; font-weight: 650; letter-spacing: .04em; text-transform: none; }
     .collage-icon { position: absolute; display: grid; place-items: center; width: 82px; height: 82px; border: 0; border-radius: 0; background: transparent; box-shadow: none; animation:icon-drift 7s ease-in-out infinite; }
     @keyframes icon-drift{0%,100%{translate:0 0}50%{translate:0 -10px}}
-    .collage-icon img { width: 78px; height: 78px; object-fit: contain; border-radius: 18px; }
+
     .collage-icon.one { left: 12%; top: 35%; transform: rotate(-9deg); animation-delay:-1.2s; }
     .collage-icon.two { left: 39%; top: 20%; transform: rotate(7deg); animation-delay:-3s; }
     .collage-icon.three { left: 33%; top: 57%; transform: rotate(3deg); animation-delay:-2s; }
     .collage-icon.four { left:67%;top:45%;animation-delay:-4s }.collage-icon.five{left:70%;top:13%;animation-delay:-.7s}
-    .collage-icon.two img { width: 80px; height: 80px; border-radius: 18px; }
-    .collage-icon.three img { width: 79px; height: 79px; }
+
+
 
 
     .projects { padding: 6px 0 0; }
@@ -94,10 +94,10 @@
     .featured-copy p { max-width: 430px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
     .feature-foot { display: flex; flex-wrap: wrap; gap: 9px 18px; margin-top: 26px; color: #526257; font-size: 10px; font-weight: 650; }
     .feature-foot span::before { content: "↗"; padding-right: 6px; color: var(--green); }
-    .feature-visual { position: relative; min-height: 340px; display: grid; place-items: center; overflow: hidden; isolation: isolate; background: linear-gradient(135deg, #e5eee4, #d3e1d4 56%, #e6eadc); }
-    .feature-visual::before { content: ""; position: absolute; z-index: -1; width: 380px; height: 380px; right: -44px; bottom: -210px; border-radius: 50%; background: rgba(255,255,255,.82); }
-    .feature-glow { position: absolute; z-index: -1; width: 250px; height: 250px; border-radius: 50%; background: rgba(112,162,125,.32); filter: blur(72px); }
-    .feature-logo{width:112px;height:112px;object-fit:contain;border:0;padding:0;border-radius:0;background:transparent;box-shadow:none;transform:none;transition:transform .42s cubic-bezier(.2,.75,.25,1),opacity .24s}.featured.slide-next.is-switching .feature-logo{opacity:0;transform:translateX(-56px) rotate(-7deg)}.featured.slide-prev.is-switching .feature-logo{opacity:0;transform:translateX(56px) rotate(7deg)}
+    .feature-visual { position: relative; min-height: 340px; display: grid; place-items: center; overflow: hidden; isolation: isolate; background: var(--art-bg, linear-gradient(135deg, #e5eee4, #d3e1d4 56%, #e6eadc)); }
+
+    .feature-glow { position: absolute; z-index: -1; width: 250px; height: 250px; border-radius: 50%; background: var(--glow, #70a27d); opacity:.38; filter: blur(72px); }
+    .feature-logo{transform:none;transition:transform .42s cubic-bezier(.2,.75,.25,1),opacity .24s}.featured.slide-next.is-switching .feature-logo{opacity:0;transform:translateX(-56px) rotate(-7deg)}.featured.slide-prev.is-switching .feature-logo{opacity:0;transform:translateX(56px) rotate(7deg)}
     .feature-index { position: absolute; top: 24px; left: 26px; color: #5f7866; font-size: 9px; font-weight: 800; letter-spacing: .15em; }
     .feature-side-note { position: absolute; right: 26px; bottom: 24px; color: #5d7563; font-size: 10px; font-weight: 650; }
 
@@ -109,19 +109,20 @@
     .project-art::after { content: ""; position: absolute; inset: 0; z-index: 2; background: linear-gradient(112deg, transparent 18%, rgba(255,255,255,.46) 47%, transparent 65%); transform: translateX(-120%); transition: transform .8s cubic-bezier(.2,.65,.25,1); pointer-events: none; }
     .project-card:hover .project-art::after { transform: translateX(120%); }
     .project-card:hover .project-art::before { transform: scale(1.3); opacity: .92; }
-    .project-art img { position: relative; z-index: 1; display:block; width:80px; height:80px; padding:0; border:0; border-radius:0; background:transparent; object-fit:contain; box-shadow:none; }
 
-    .art-lpp img{box-shadow:none}.art-lpp{background:linear-gradient(135deg,#171f1b,#232c27 58%,#29342e)}
+
+
+    .art-lpp{background:linear-gradient(135deg,#171f1b,#232c27 58%,#29342e)}
     .project-card,.featured{cursor:pointer}.project-card:focus-visible,.featured:focus-visible{outline:3px solid rgba(71,107,88,.55);outline-offset:4px}
     .project-modal{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:22px;background:rgba(19,25,21,.48);backdrop-filter:blur(16px);opacity:0;visibility:hidden;transition:opacity .28s,visibility .28s}.project-modal.open{opacity:1;visibility:visible}
-    .modal-panel{position:relative;width:min(680px,100%);max-height:82vh;overflow:auto;padding:clamp(30px,6vw,56px);border:1px solid rgba(255,255,255,.78);border-radius:32px;background:linear-gradient(145deg,color-mix(in srgb,var(--project-glow,#dce9df) 22%,white),#fffefa 58%);box-shadow:0 32px 100px rgba(0,0,0,.22);transform:translateY(42px) scale(.88) rotateX(7deg);filter:none;opacity:.65;transition:transform .38s cubic-bezier(.2,.9,.3,1),opacity .2s}.project-modal.open .modal-panel{transform:translateY(0) scale(1) rotateX(0);filter:none;opacity:1}.modal-head{display:grid;grid-template-columns:minmax(0,1fr) 132px;align-items:center;gap:24px}.modal-logo-wrap{width:100px;height:100px;margin:0 auto;padding:0;display:grid;place-items:center;border:0;border-radius:0;background:transparent;box-shadow:none}@media(max-width:520px){.modal-head{grid-template-columns:minmax(0,1fr) 86px;gap:12px}.modal-logo-wrap{width:76px;height:76px;padding:9px}.modal-panel{padding:28px 22px}.modal-panel h2{font-size:36px}}.modal-logo-wrap img{width:100%;height:100%;object-fit:contain;border-radius:17px}.modal-panel #modal-extra{font-size:13px}.project-modal .modal-panel{background:linear-gradient(145deg,color-mix(in srgb,var(--project-glow,#dce9df) 38%,white),#fffefa 78%);border-color:color-mix(in srgb,var(--project-glow,#dce9df) 45%,white)}
+    .modal-panel{position:relative;width:min(680px,100%);max-height:82vh;overflow:auto;padding:clamp(30px,6vw,56px);border:1px solid rgba(255,255,255,.78);border-radius:32px;background:linear-gradient(145deg,color-mix(in srgb,var(--project-glow,#dce9df) 22%,white),#fffefa 58%);box-shadow:0 32px 100px rgba(0,0,0,.22);transform:translateY(42px) scale(.88) rotateX(7deg);filter:none;opacity:.65;transition:transform .38s cubic-bezier(.2,.9,.3,1),opacity .2s}.project-modal.open .modal-panel{transform:translateY(0) scale(1) rotateX(0);filter:none;opacity:1}.modal-head{display:grid;grid-template-columns:minmax(0,1fr) 132px;align-items:center;gap:24px}.modal-logo-wrap{width:100px;height:100px;margin:0 auto;padding:0;display:grid;place-items:center;border:0;border-radius:0;background:transparent;box-shadow:none}@media(max-width:520px){.modal-head{grid-template-columns:minmax(0,1fr) 86px;gap:12px}.modal-logo-wrap{width:76px;height:76px;padding:9px}.modal-panel{padding:28px 22px}.modal-panel h2{font-size:36px}}.modal-panel #modal-extra{font-size:13px}.project-modal .modal-panel{background:linear-gradient(145deg,color-mix(in srgb,var(--project-glow,#dce9df) 38%,white),#fffefa 78%);border-color:color-mix(in srgb,var(--project-glow,#dce9df) 45%,white)}
     .modal-close{position:absolute;top:18px;right:18px;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:#fffefa;font-size:22px;cursor:pointer}.modal-panel h2{margin:18px 0}.modal-panel p{color:var(--muted);font-size:15px;line-height:1.8}.modal-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}.modal-tags span{padding:9px 12px;border-radius:99px;background:#edf1ea;font-size:11px;font-weight:700}body.modal-open{overflow:hidden}
     .art-caption { position: absolute; z-index: 3; top: 16px; left: 18px; color: rgba(33,50,39,.66); font-size: 9px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
     .art-mark { position: absolute; z-index: 3; right: 18px; bottom: 15px; color: rgba(33,50,39,.58); font-size: 10px; font-weight: 700; }
-    .art-gym { --art-bg: linear-gradient(135deg, #e7efe5, #d7e7d8 62%, #e5eadc); --glow: #aacbaa; }
+    .art-gym { --art-bg: linear-gradient(135deg, #dcebd8, #bfdcbc 62%, #d2e6c9); --glow: #78ab75; }
     .art-itler { --art-bg: linear-gradient(145deg, #e9edf5, #e2e8f2 58%, #f0eadf); --glow: #b4c5e2; }
-    .art-castr { --art-bg: linear-gradient(145deg, #e5eaec, #dbe4e8 55%, #eee7dd); --glow: #9bb8c0; }
-    .art-geoarty { --art-bg: linear-gradient(140deg, #f0eaf2, #f2eae4 58%, #e7ebdf); --glow: #c8acd6; }
+    .art-castr { --art-bg: linear-gradient(145deg, #dce9ef, #bdd6e3 55%, #e8d8e8); --glow: #7faac5; }
+    .art-geoarty { --art-bg: linear-gradient(140deg, #ead6f0, #efd2e2 58%, #e4e8ca); --glow: #c18ed1; }
     .art-lpp { --art-bg: linear-gradient(145deg, #181f1b, #222b27 55%, #27322c); --glow: rgba(184,246,105,.68); }
     .art-lpp .art-caption, .art-lpp .art-mark { color: rgba(242,247,237,.7); }
     .art-kurzma { --art-bg: linear-gradient(145deg, #f1eadf, #e5eadf 58%, #eee0d5); --glow: #bfd0b2; }
@@ -172,11 +173,11 @@
       .hero-actions { gap: 13px; flex-wrap: wrap; }
       .hero-collage { min-height: 275px; border-radius: 27px; }
       .collage-icon { width: 66px; height: 66px; }
-      .collage-icon img { width: 61px; height: 61px; }
+
       .collage-icon.one { left: 7%; top: 34%; }
       .collage-icon.two { left: 38%; top: 22%; }
       .collage-icon.three { left: 29%; top: 58%; }
-      .collage-icon.two img { width: 62px; height: 62px; } .collage-icon.three img { width: 62px; height: 62px; } .collage-icon.four{left:65%;top:46%}.collage-icon.five{left:70%;top:17%}
+  .collage-icon.four{left:65%;top:46%}.collage-icon.five{left:70%;top:17%}
       .collage-label, .collage-footer { left: 18px; right: 18px; }
       .collage-label { top: 18px; }
       .collage-footer { bottom: 17px; }
@@ -199,6 +200,7 @@
       .collage-icon{animation-duration:12s}
     }
   </style>
+  <link rel="stylesheet" href="assets/project-icons/standard.css">
 </head>
 <body>
   <header class="topbar" id="topbar">
@@ -223,11 +225,11 @@
       </div>
       <div class="hero-collage" aria-label="Einige App-Logos aus dem Portfolio">
 
-        <div class="collage-icon one"><img src="assets/gym.svg" alt="GÜYM"></div>
-        <div class="collage-icon two"><img src="assets/geoarty.png" alt="GEOARTY"></div>
-        <div class="collage-icon three"><img src="assets/lpp.png" alt="Luma Pulse"></div>
-        <div class="collage-icon four"><img src="assets/castr.png" alt="CASTR"></div>
-        <div class="collage-icon five"><img src="assets/itler.svg" alt="iT’ler"></div>
+        <div class="collage-icon one"><img src="assets/project-icons/gym.png" alt="GÜYM"></div>
+        <div class="collage-icon two"><img src="assets/project-icons/geoarty.png" alt="GEOARTY"></div>
+        <div class="collage-icon three"><img src="assets/project-icons/luma-pulse-sender.png" alt="Luma Pulse"></div>
+        <div class="collage-icon four"><img src="assets/project-icons/castr.png" alt="CASTR"></div>
+        <div class="collage-icon five"><img src="assets/project-icons/itler.svg" alt="iT’ler"></div>
 
       </div>
     </section>
@@ -247,7 +249,7 @@
         </div>
         <div class="feature-visual art-gym">
           <span class="feature-index">01 / TRAINING</span><span class="feature-glow" aria-hidden="true"></span>
-          <img class="feature-logo" src="assets/gym.svg" alt="GÜYM App-Icon">
+          <img class="feature-logo" src="assets/project-icons/gym.png" alt="GÜYM App-Icon">
           <span class="feature-side-note">Training, Fortschritt, Pause.</span>
           <div class="feature-controls" aria-label="Projektvorschau steuern"><button type="button" data-feature-prev aria-label="Vorheriges Projekt"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10.5 3 5.5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button type="button" data-feature-next aria-label="Nächstes Projekt"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m5.5 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
         </div>
@@ -255,23 +257,23 @@
 
       <div class="project-grid">
         <article class="project-card reveal">
-          <div class="project-art art-itler"><span class="art-caption">Lernen · Web</span><img src="assets/itler.svg" alt="iT’ler Logo"><span class="art-mark">Quiz & Lernfortschritt</span></div>
+          <div class="project-art art-itler"><span class="art-caption">Lernen · Web</span><img src="assets/project-icons/itler.svg" alt="iT’ler Logo"><span class="art-mark">Quiz & Lernfortschritt</span></div>
           <div class="project-body"><div class="project-meta"><span class="project-type">Webprojekt</span><span class="status">Verfügbar</span></div><h3>iT’ler Lerntrainer</h3><p>Prüfungsstoff verständlich und praktisch üben: Themen, Quizfragen und lokal gespeicherter Lernfortschritt.</p></div>
         </article>
         <article class="project-card reveal">
-          <div class="project-art art-castr"><span class="art-caption">Audio · iOS</span><img class="logo-castr" src="assets/castr.png" alt="CASTR Zeichen"><span class="art-mark">Podcasts · RSS</span></div>
+          <div class="project-art art-castr"><span class="art-caption">Audio · iOS</span><img src="assets/project-icons/castr.png" alt="CASTR Zeichen"><span class="art-mark">Podcasts · RSS</span></div>
           <div class="project-body"><div class="project-meta"><span class="project-type">iOS · SwiftUI</span><span class="status">App-Grundlage</span></div><h3>CASTR</h3><p>Podcasts ohne Konto und Tracking: Die persönliche Bibliothek bleibt lokal; Folgen kommen direkt vom Publisher.</p></div>
         </article>
         <article class="project-card reveal">
-          <div class="project-art art-geoarty"><span class="art-caption">Foto · iOS</span><img src="assets/geoarty.png" alt="GEOARTY App-Icon"><span class="art-mark">Looks direkt auf dem iPhone</span></div>
+          <div class="project-art art-geoarty"><span class="art-caption">Foto · iOS</span><img src="assets/project-icons/geoarty.png" alt="GEOARTY App-Icon"><span class="art-mark">Looks direkt auf dem iPhone</span></div>
           <div class="project-body"><div class="project-meta"><span class="project-type">iOS · SwiftUI · On-device</span><span class="status">In Arbeit</span></div><h3>GEOARTY</h3><p>Kreative Looks, ohne Fotos zum Bearbeiten vom iPhone wegzuschicken: GEOARTY verarbeitet ausgewählte Bilder lokal.</p></div>
         </article>
         <article class="project-card reveal">
-          <div class="project-art art-lpp"><span class="art-caption">Kamera · iPhone</span><img src="assets/lpp.png" alt="Luma Pulse App-Icon"><span class="art-mark">Live-Kamera für Windows</span></div>
+          <div class="project-art art-lpp"><span class="art-caption">Kamera · iPhone</span><img src="assets/project-icons/luma-pulse-sender.png" alt="Luma Pulse App-Icon"><span class="art-mark">Live-Kamera für Windows</span></div>
           <div class="project-body"><div class="project-meta"><span class="project-type">iOS · Luma Pulse Protocol</span><span class="status">Sender-Prototyp</span></div><h3>Luma Pulse Sender</h3><p>Die iPhone-Kamera live als Quelle für Windows-Bühnenvisuals – ohne Videoaufnahme oder gespeicherte Videodatei.</p></div>
         </article>
         <article class="project-card reveal">
-          <div class="project-art art-lpp"><span class="art-caption">Audio · Stage Visuals</span><img src="assets/lpp.png" alt="Luma Pulse App-Icon"><span class="art-mark">Bilder · Video · Effekte</span></div>
+          <div class="project-art art-lpp"><span class="art-caption">Audio · Stage Visuals</span><img src="assets/project-icons/luma-pulse-react.png" alt="Luma Pulse React App-Icon"><span class="art-mark">Bilder · Video · Effekte</span></div>
           <div class="project-body"><div class="project-meta"><span class="project-type">Windows · OBS</span><span class="status">Prototyp</span></div><h3>Luma Pulse React</h3><p>Bühnenbilder passend zum Audio gestalten: Frequenzen steuern Ebenen und Effekte, die Ausgabe geht an Bühne oder OBS.</p></div>
         </article>
         <article class="project-card reveal">
@@ -295,7 +297,7 @@
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const modal=document.getElementById('project-modal'), closeButton=modal.querySelector('.modal-close'); let lastTrigger=null;
       const projectGrid=document.querySelector('.project-grid');
-      const gymCard=document.createElement('article');gymCard.className='project-card reveal';gymCard.innerHTML='<div class="project-art art-gym"><span class="art-caption">Training · iOS</span><img src="assets/gym.svg" alt="GÜYM App-Icon"></div><div class="project-body"><div class="project-meta"><span class="project-type">iOS · Web-App</span><span class="status">In Entwicklung</span></div><h3>GÜYM</h3><p>Einheiten und Fortschritt festhalten – lokal, ohne Konto oder Cloud-Sync.</p></div>';projectGrid.prepend(gymCard);
+      const gymCard=document.createElement('article');gymCard.className='project-card reveal';gymCard.innerHTML='<div class="project-art art-gym"><span class="art-caption">Training · iOS</span><img src="assets/project-icons/gym.png" alt="GÜYM App-Icon"></div><div class="project-body"><div class="project-meta"><span class="project-type">iOS · Web-App</span><span class="status">In Entwicklung</span></div><h3>GÜYM</h3><p>Einheiten und Fortschritt festhalten – lokal, ohne Konto oder Cloud-Sync.</p></div>';projectGrid.prepend(gymCard);
       const allProjects=[...projectGrid.querySelectorAll('.project-card')];let featureIndex=0;const feature=document.querySelector('.featured');
       const showFeature=(index,direction=1)=>{featureIndex=(index+allProjects.length)%allProjects.length;const card=allProjects[featureIndex],art=card.querySelector('.project-art'),img=art.querySelector('img');feature.classList.remove('slide-next','slide-prev');feature.classList.add(direction>0?'slide-next':'slide-prev','is-switching');setTimeout(()=>{feature.querySelector('.featured h3').textContent=card.querySelector('h3').textContent;feature.querySelector('.featured-copy .project-type').textContent=card.querySelector('.project-type').textContent;feature.querySelector('.featured-copy .status').textContent=card.querySelector('.status').textContent;feature.querySelector('.featured-copy>p').textContent=card.querySelector('.project-body p').textContent;feature.querySelector('.feature-index').textContent=String(featureIndex+1).padStart(2,'0')+' / '+card.querySelector('h3').textContent.toUpperCase();feature.querySelector('.feature-side-note').textContent=card.querySelector('.art-mark')?.textContent||card.querySelector('.project-type').textContent;const logo=feature.querySelector('.feature-logo');logo.src=img?.getAttribute('src')||'assets/kurzma.svg';logo.alt=card.querySelector('h3').textContent+' App-Logo';feature.querySelector('.feature-visual').className='feature-visual '+[...art.classList].find(c=>c.startsWith('art-'));allProjects.forEach((item,i)=>{item.hidden=i===featureIndex});requestAnimationFrame(()=>feature.classList.remove('is-switching','slide-next','slide-prev'))},220)};
       showFeature(0);

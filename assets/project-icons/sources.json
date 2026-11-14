@@ -1,0 +1,57 @@
+{
+  "schema": "jorgo-portfolio-app-icon-v1",
+  "display": {
+    "cards": "80x80 CSS px",
+    "feature": "112x112 CSS px",
+    "hero": "78x78 CSS px desktop, 62x62 mobile",
+    "modal": "100x100 CSS px",
+    "cornerRadius": "22.5%",
+    "fit": "cover",
+    "extraFrame": false
+  },
+  "icons": {
+    "GÜYM": {
+      "file": "gym.png",
+      "repository": "jorgodivazzi/GYM",
+      "revision": "96a48fa43dd9c6c74fad157ba497d4bd6cec5cbe",
+      "source": "ios/GÜYM/GÜYM/Assets.xcassets/AppIcon.appiconset/AppIcon.png"
+    },
+    "iT’ler Lerntrainer": {
+      "file": "itler.svg",
+      "repository": "jorgodivazzi/it-ler-ntrainer",
+      "revision": "7efedb9d647a9f8015cb9d352e4f548b640aa87a",
+      "source": "itler-icon.svg"
+    },
+    "CASTR": {
+      "file": "castr.png",
+      "repository": "jorgodivazzi/CASTR",
+      "revision": "3d65e0c2a93d74a80187f7119766e116792b8998",
+      "source": "CASTR/Assets.xcassets/AppIcon.appiconset/AppIcon.png"
+    },
+    "GEOARTY": {
+      "file": "geoarty.png",
+      "repository": "jorgodivazzi/GEOARTY",
+      "revision": "40aedac2346b20439b2137f16ec9cab4e9b94089",
+      "source": "GEOARTY/Assets.xcassets/AppIcon.appiconset/AppIcon.png"
+    },
+    "Luma Pulse Sender": {
+      "file": "luma-pulse-sender.png",
+      "repository": "jorgodivazzi/LumaPulseProtocol",
+      "revision": "cdea616ca09d0c1f5f28f82a2522476d224b20d0",
+      "source": "LumaPulseSender/LumaPulseSender/Assets.xcassets/AppIcon.appiconset/LumaPulseAppIcon.png"
+    },
+    "Luma Pulse React": {
+      "file": "luma-pulse-react.png",
+      "repository": "jorgodivazzi/Luma-Pulse-React",
+      "revision": "4308d98aa14691d7febc3b04021ae8fc21787eb3",
+      "source": "public/luma-pulse-app-icon.png",
+      "sourceBlobSha": "09aa444a5ba660208303f3056c26665bd88ff7e3",
+      "sameBlobAs": "Luma Pulse Sender"
+    },
+    "KurzMa": {
+      "file": null,
+      "repository": "jorgodivazzi/KurzMa",
+      "status": "Repository ist leer; finales Logo noch nicht vorhanden."
+    }
+  }
+}
