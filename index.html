@@ -76,7 +76,7 @@
     .collage-icon.four { left:67%;top:45%;animation-delay:-4s }.collage-icon.five{left:70%;top:13%;animation-delay:-.7s}
     .collage-icon.two img { width: 80px; height: 80px; border-radius: 18px; }
     .collage-icon.three img { width: 79px; height: 79px; }
-    .collage-icon.four img{padding:10px;border-radius:22px;background:#fffefa}.collage-icon.five img{padding:8px;border-radius:20px}
+
 
     .projects { padding: 6px 0 0; }
     .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin: 0 0 24px; }
@@ -85,7 +85,7 @@
     .section-intro { max-width: 335px; margin: 0 0 3px; color: var(--muted); font-size: 12px; line-height: 1.65; text-align: right; }
 
     .featured { display: grid; grid-template-columns: .95fr 1.05fr; min-height: 390px; margin-bottom: 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 32px; background: var(--surface); box-shadow: 0 18px 55px rgba(30,43,34,.045); }
-    .featured-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(30px, 5vw, 62px); transition:opacity .2s,transform .3s; }.featured.is-switching .featured-copy{opacity:.25;transform:translateY(10px)}.featured .feature-visual{transition:background .5s}.feature-controls{position:absolute;left:24px;bottom:20px;display:flex;gap:6px;z-index:4}.feature-controls button{display:grid;place-items:center;width:28px;height:28px;padding:0;border:1px solid rgba(50,70,55,.15);border-radius:50%;background:rgba(255,255,255,.64);color:#405648;font:600 17px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;cursor:pointer}
+    .featured-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(30px, 5vw, 62px); transition:opacity .2s,transform .3s; }.featured.is-switching .featured-copy{opacity:.25;transform:translateY(10px)}.featured .feature-visual{transition:background .5s}.feature-controls{position:absolute;left:24px;bottom:20px;display:flex;gap:6px;z-index:4}.feature-controls button{display:grid;place-items:center;width:28px;height:28px;padding:0;border:1px solid rgba(50,70,55,.15);border-radius:50%;background:rgba(255,255,255,.64);color:#405648;cursor:pointer}.feature-controls button svg{display:block;width:14px;height:14px;overflow:visible}
     .project-meta { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 24px; }
     .project-type { color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
     .status { display: inline-flex; align-items: center; gap: 7px; color: #4f6e58; font-size: 10px; font-weight: 700; }
@@ -109,10 +109,8 @@
     .project-art::after { content: ""; position: absolute; inset: 0; z-index: 2; background: linear-gradient(112deg, transparent 18%, rgba(255,255,255,.46) 47%, transparent 65%); transform: translateX(-120%); transition: transform .8s cubic-bezier(.2,.65,.25,1); pointer-events: none; }
     .project-card:hover .project-art::after { transform: translateX(120%); }
     .project-card:hover .project-art::before { transform: scale(1.3); opacity: .92; }
-    .project-art img { position: relative; z-index: 1; width: 76px; height: 76px; object-fit: contain; border-radius: 20px; box-shadow: 0 16px 34px rgba(30,43,34,.14); }
-    .project-art .logo-wide { width: 142px; height: 92px; border-radius: 0; box-shadow: none; }
-    .project-art .logo-castr { width:88px;height:88px;padding:12px;border:1px solid rgba(30,43,34,.08);border-radius:25px;background:rgba(255,255,255,.88);box-shadow:0 16px 34px rgba(30,43,34,.12); }
-    .art-itler img{width:88px;height:88px;padding:8px;border:1px solid rgba(255,255,255,.9);border-radius:24px;background:#fff;box-shadow:0 12px 28px rgba(30,43,34,.1)}
+    .project-art img { position: relative; z-index: 1; display:block; width:80px; height:80px; padding:0; border:0; border-radius:0; background:transparent; object-fit:contain; box-shadow:none; }
+
     .art-lpp img{box-shadow:none}.art-lpp{background:linear-gradient(135deg,#171f1b,#232c27 58%,#29342e)}
     .project-card,.featured{cursor:pointer}.project-card:focus-visible,.featured:focus-visible{outline:3px solid rgba(71,107,88,.55);outline-offset:4px}
     .project-modal{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:22px;background:rgba(19,25,21,.48);backdrop-filter:blur(16px);opacity:0;visibility:hidden;transition:opacity .28s,visibility .28s}.project-modal.open{opacity:1;visibility:visible}
@@ -126,7 +124,6 @@
     .art-geoarty { --art-bg: linear-gradient(140deg, #f0eaf2, #f2eae4 58%, #e7ebdf); --glow: #c8acd6; }
     .art-lpp { --art-bg: linear-gradient(145deg, #181f1b, #222b27 55%, #27322c); --glow: rgba(184,246,105,.68); }
     .art-lpp .art-caption, .art-lpp .art-mark { color: rgba(242,247,237,.7); }
-    .art-geoarty img { width:82px; height:82px; border-radius:22px; }
     .art-kurzma { --art-bg: linear-gradient(145deg, #f1eadf, #e5eadf 58%, #eee0d5); --glow: #bfd0b2; }
     .art-inprogress { display: flex; align-items: center; justify-content: center; }
     .inprogress-label { padding: 10px 14px; border: 1px solid rgba(54,78,58,.14); border-radius: 99px; color: #667267; background: rgba(255,255,255,.45); font-size: 10px; font-weight: 700; letter-spacing: .05em; }
@@ -225,20 +222,20 @@
         </div>
       </div>
       <div class="hero-collage" aria-label="Einige App-Logos aus dem Portfolio">
-        
+
         <div class="collage-icon one"><img src="assets/gym.svg" alt="GÜYM"></div>
         <div class="collage-icon two"><img src="assets/geoarty.png" alt="GEOARTY"></div>
         <div class="collage-icon three"><img src="assets/lpp.png" alt="Luma Pulse"></div>
         <div class="collage-icon four"><img src="assets/castr.png" alt="CASTR"></div>
         <div class="collage-icon five"><img src="assets/itler.svg" alt="iT’ler"></div>
-        
+
       </div>
     </section>
 
     <section class="projects shell" id="projekte" aria-labelledby="projects-title">
       <div class="section-heading">
         <div><p class="section-kicker">Projekte im Überblick</p><h2 id="projects-title">Projekte</h2></div>
-        
+
       </div>
 
       <article class="featured reveal">
@@ -252,7 +249,7 @@
           <span class="feature-index">01 / TRAINING</span><span class="feature-glow" aria-hidden="true"></span>
           <img class="feature-logo" src="assets/gym.svg" alt="GÜYM App-Icon">
           <span class="feature-side-note">Training, Fortschritt, Pause.</span>
-          <div class="feature-controls" aria-label="Projektvorschau steuern"><button type="button" data-feature-prev aria-label="Vorheriges Projekt">‹</button><button type="button" data-feature-next aria-label="Nächstes Projekt">›</button></div>
+          <div class="feature-controls" aria-label="Projektvorschau steuern"><button type="button" data-feature-prev aria-label="Vorheriges Projekt"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10.5 3 5.5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button type="button" data-feature-next aria-label="Nächstes Projekt"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m5.5 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
         </div>
       </article>
 
@@ -298,7 +295,7 @@
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const modal=document.getElementById('project-modal'), closeButton=modal.querySelector('.modal-close'); let lastTrigger=null;
       const projectGrid=document.querySelector('.project-grid');
-      const gymCard=document.createElement('article');gymCard.className='project-card reveal';gymCard.innerHTML='<div class="project-art art-gym"><span class="art-caption">Training · iOS</span><img src="assets/gym.svg" alt="GÜYM App-Icon"></div><div class="project-body"><div class="project-meta"><span class="project-type">iOS · Web-App</span><span class="status">In Entwicklung</span></div><h3>GÜYM</h3><p>Trainingsbegleiter für Einheiten, Fortschritt und Pausen.</p></div>';projectGrid.prepend(gymCard);
+      const gymCard=document.createElement('article');gymCard.className='project-card reveal';gymCard.innerHTML='<div class="project-art art-gym"><span class="art-caption">Training · iOS</span><img src="assets/gym.svg" alt="GÜYM App-Icon"></div><div class="project-body"><div class="project-meta"><span class="project-type">iOS · Web-App</span><span class="status">In Entwicklung</span></div><h3>GÜYM</h3><p>Einheiten und Fortschritt festhalten – lokal, ohne Konto oder Cloud-Sync.</p></div>';projectGrid.prepend(gymCard);
       const allProjects=[...projectGrid.querySelectorAll('.project-card')];let featureIndex=0;const feature=document.querySelector('.featured');
       const showFeature=(index,direction=1)=>{featureIndex=(index+allProjects.length)%allProjects.length;const card=allProjects[featureIndex],art=card.querySelector('.project-art'),img=art.querySelector('img');feature.classList.remove('slide-next','slide-prev');feature.classList.add(direction>0?'slide-next':'slide-prev','is-switching');setTimeout(()=>{feature.querySelector('.featured h3').textContent=card.querySelector('h3').textContent;feature.querySelector('.featured-copy .project-type').textContent=card.querySelector('.project-type').textContent;feature.querySelector('.featured-copy .status').textContent=card.querySelector('.status').textContent;feature.querySelector('.featured-copy>p').textContent=card.querySelector('.project-body p').textContent;feature.querySelector('.feature-index').textContent=String(featureIndex+1).padStart(2,'0')+' / '+card.querySelector('h3').textContent.toUpperCase();feature.querySelector('.feature-side-note').textContent=card.querySelector('.art-mark')?.textContent||card.querySelector('.project-type').textContent;const logo=feature.querySelector('.feature-logo');logo.src=img?.getAttribute('src')||'assets/kurzma.svg';logo.alt=card.querySelector('h3').textContent+' App-Logo';feature.querySelector('.feature-visual').className='feature-visual '+[...art.classList].find(c=>c.startsWith('art-'));allProjects.forEach((item,i)=>{item.hidden=i===featureIndex});requestAnimationFrame(()=>feature.classList.remove('is-switching','slide-next','slide-prev'))},220)};
       showFeature(0);
