@@ -67,13 +67,16 @@
     .collage-label, .collage-footer { position: absolute; left: 24px; right: 24px; display: flex; justify-content: space-between; color: #476052; font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
     .collage-label { top: 23px; }
     .collage-footer { bottom: 22px; color: #63766a; font-size: 10px; font-weight: 650; letter-spacing: .04em; text-transform: none; }
-    .collage-icon { position: absolute; display: grid; place-items: center; width: 114px; height: 114px; border: 1px solid rgba(255,255,255,.78); border-radius: 28px; background: rgba(255,255,255,.56); box-shadow: 0 20px 46px rgba(39,62,45,.13); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-    .collage-icon img { width: 76px; height: 76px; object-fit: contain; border-radius: 19px; }
-    .collage-icon.one { left: 20%; top: 30%; transform: rotate(-9deg); }
-    .collage-icon.two { left: 47%; top: 24%; transform: rotate(7deg); }
-    .collage-icon.three { left: 36%; top: 53%; transform: rotate(3deg); }
-    .collage-icon.two img { width: 80px; height: 80px; border-radius: 18px; box-shadow: 0 8px 22px rgba(30,43,34,.12); }
+    .collage-icon { position: absolute; display: grid; place-items: center; width: 82px; height: 82px; border: 0; border-radius: 0; background: transparent; box-shadow: none; animation:icon-drift 7s ease-in-out infinite; }
+    @keyframes icon-drift{0%,100%{translate:0 0}50%{translate:0 -10px}}
+    .collage-icon img { width: 78px; height: 78px; object-fit: contain; border-radius: 18px; }
+    .collage-icon.one { left: 12%; top: 35%; transform: rotate(-9deg); animation-delay:-1.2s; }
+    .collage-icon.two { left: 39%; top: 20%; transform: rotate(7deg); animation-delay:-3s; }
+    .collage-icon.three { left: 33%; top: 57%; transform: rotate(3deg); animation-delay:-2s; }
+    .collage-icon.four { left:67%;top:45%;animation-delay:-4s }.collage-icon.five{left:70%;top:13%;animation-delay:-.7s}
+    .collage-icon.two img { width: 80px; height: 80px; border-radius: 18px; }
     .collage-icon.three img { width: 79px; height: 79px; }
+    .collage-icon.four img{padding:10px;border-radius:22px;background:#fffefa}.collage-icon.five img{padding:8px;border-radius:20px}
 
     .projects { padding: 6px 0 0; }
     .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin: 0 0 24px; }
@@ -169,12 +172,12 @@
       .hero-copy { font-size: 14px; }
       .hero-actions { gap: 13px; flex-wrap: wrap; }
       .hero-collage { min-height: 275px; border-radius: 27px; }
-      .collage-icon { width: 88px; height: 88px; border-radius: 23px; }
+      .collage-icon { width: 66px; height: 66px; }
       .collage-icon img { width: 61px; height: 61px; }
-      .collage-icon.one { left: 13%; top: 32%; }
-      .collage-icon.two { left: 44%; top: 23%; }
-      .collage-icon.three { left: 34%; top: 53%; }
-      .collage-icon.two img { width: 62px; height: 62px; } .collage-icon.three img { width: 62px; height: 62px; }
+      .collage-icon.one { left: 7%; top: 34%; }
+      .collage-icon.two { left: 38%; top: 22%; }
+      .collage-icon.three { left: 29%; top: 58%; }
+      .collage-icon.two img { width: 62px; height: 62px; } .collage-icon.three img { width: 62px; height: 62px; } .collage-icon.four{left:65%;top:46%}.collage-icon.five{left:70%;top:17%}
       .collage-label, .collage-footer { left: 18px; right: 18px; }
       .collage-label { top: 18px; }
       .collage-footer { bottom: 17px; }
@@ -194,6 +197,7 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
       .reveal { opacity: 1; transform: none; }
+      .collage-icon{animation-duration:12s}
     }
   </style>
 </head>
@@ -210,7 +214,7 @@
   <main>
     <section class="hero shell" id="start">
       <div class="hero-content">
-        <p class="eyebrow">Jorgo Divazzi · unabhängige Projekte</p>
+        <p class="eyebrow">Portfolio</p>
         <h1>Ich baue<br><em>digitale Produkte.</em></h1>
         <p class="hero-copy">Der Schwerpunkt liegt auf iPhone und Apple-Plattformen. Hier entstehen Apps, die ich von der ersten Idee bis zum Prototyp selbst entwickle – ergänzt durch ausgewählte Web- und Desktop-Projekte.</p>
         <div class="hero-actions">
@@ -219,18 +223,20 @@
         </div>
       </div>
       <div class="hero-collage" aria-label="Einige App-Logos aus dem Portfolio">
-        <span class="collage-label"><span>Aus Ideen werden Produkte</span><span>01 — 07</span></span>
+        
         <div class="collage-icon one"><img src="assets/gym.svg" alt="GÜYM"></div>
         <div class="collage-icon two"><img src="assets/geoarty.png" alt="GEOARTY"></div>
         <div class="collage-icon three"><img src="assets/lpp.png" alt="Luma Pulse"></div>
-        <span class="collage-footer"><span>Training, Foto, Audio und mehr</span><span>Eigenständig entwickelt</span></span>
+        <div class="collage-icon four"><img src="assets/castr.png" alt="CASTR"></div>
+        <div class="collage-icon five"><img src="assets/itler.svg" alt="iT’ler"></div>
+        
       </div>
     </section>
 
     <section class="projects shell" id="projekte" aria-labelledby="projects-title">
       <div class="section-heading">
         <div><p class="section-kicker">Projekte im Überblick</p><h2 id="projects-title">Projekte</h2></div>
-        <p class="section-intro">Ein paar Dinge, an denen ich gerade arbeite – von der ersten App-Idee bis zum laufenden Webprojekt.</p>
+        
       </div>
 
       <article class="featured reveal">
@@ -291,7 +297,7 @@
       const projectGrid=document.querySelector('.project-grid');
       const gymCard=document.createElement('article');gymCard.className='project-card reveal';gymCard.innerHTML='<div class="project-art art-gym"><span class="art-caption">Training · iOS</span><img src="assets/gym.svg" alt="GÜYM App-Icon"></div><div class="project-body"><div class="project-meta"><span class="project-type">iOS · Web-App</span><span class="status">In Entwicklung</span></div><h3>GÜYM</h3><p>Trainingsbegleiter für Einheiten, Fortschritt und Pausen.</p></div>';projectGrid.prepend(gymCard);
       const allProjects=[...projectGrid.querySelectorAll('.project-card')];let featureIndex=0;const feature=document.querySelector('.featured');
-      const showFeature=(index)=>{featureIndex=(index+allProjects.length)%allProjects.length;const card=allProjects[featureIndex],art=card.querySelector('.project-art'),img=art.querySelector('img');feature.classList.add('is-switching');setTimeout(()=>{feature.querySelector('.featured h3').textContent=card.querySelector('h3').textContent;feature.querySelector('.featured-copy .project-type').textContent=card.querySelector('.project-type').textContent;feature.querySelector('.featured-copy .status').textContent=card.querySelector('.status').textContent;feature.querySelector('.featured-copy>p').textContent=card.querySelector('.project-body p').textContent;feature.querySelector('.feature-index').textContent=String(featureIndex+1).padStart(2,'0')+' / '+card.querySelector('h3').textContent.toUpperCase();feature.querySelector('.feature-side-note').textContent=card.querySelector('.art-mark')?.textContent||'Eigenständig entwickelt';const logo=feature.querySelector('.feature-logo');logo.src=img?.getAttribute('src')||'assets/kurzma.svg';logo.alt=card.querySelector('h3').textContent+' App-Logo';feature.querySelector('.feature-visual').className='feature-visual '+[...art.classList].find(c=>c.startsWith('art-'));allProjects.forEach((item,i)=>{item.hidden=i===featureIndex});feature.classList.remove('is-switching')},180)};
+      const showFeature=(index)=>{featureIndex=(index+allProjects.length)%allProjects.length;const card=allProjects[featureIndex],art=card.querySelector('.project-art'),img=art.querySelector('img');feature.classList.add('is-switching');setTimeout(()=>{feature.querySelector('.featured h3').textContent=card.querySelector('h3').textContent;feature.querySelector('.featured-copy .project-type').textContent=card.querySelector('.project-type').textContent;feature.querySelector('.featured-copy .status').textContent=card.querySelector('.status').textContent;feature.querySelector('.featured-copy>p').textContent=card.querySelector('.project-body p').textContent;feature.querySelector('.feature-index').textContent=String(featureIndex+1).padStart(2,'0')+' / '+card.querySelector('h3').textContent.toUpperCase();feature.querySelector('.feature-side-note').textContent=card.querySelector('.art-mark')?.textContent||card.querySelector('.project-type').textContent;const logo=feature.querySelector('.feature-logo');logo.src=img?.getAttribute('src')||'assets/kurzma.svg';logo.alt=card.querySelector('h3').textContent+' App-Logo';feature.querySelector('.feature-visual').className='feature-visual '+[...art.classList].find(c=>c.startsWith('art-'));allProjects.forEach((item,i)=>{item.hidden=i===featureIndex});feature.classList.remove('is-switching')},180)};
       showFeature(0);
       feature.querySelector('[data-feature-prev]').addEventListener('click',e=>{e.stopPropagation();showFeature(featureIndex-1)});feature.querySelector('[data-feature-next]').addEventListener('click',e=>{e.stopPropagation();showFeature(featureIndex+1)});
       if(!reduce)window.setInterval(()=>{if(!modal.classList.contains('open'))showFeature(featureIndex+1)},6500);
