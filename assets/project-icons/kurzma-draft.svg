@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title description">
+  <title id="title">KurzMa app icon concept</title>
+  <desc id="description">A calm green doorway opening onto a sunlit landscape, with a short path leading out.</desc>
+
+  <!-- Full-bleed square artwork; iOS applies the platform mask. -->
+  <rect width="1024" height="1024" fill="#F1EBDD"/>
+
+  <!-- A single, sturdy arch reads as stepping outside without a map-pin cliché. -->
+  <path d="M224 824V470a288 288 0 0 1 576 0v354h-72V470a216 216 0 0 0-432 0v354z" fill="#25453D"/>
+
+  <!-- Quiet sky and landscape sit inside the arch. -->
+  <path d="M296 824V470a216 216 0 0 1 432 0v354z" fill="#DCE6D9"/>
+  <circle cx="608" cy="488" r="63" fill="#D58A6B"/>
+  <path d="M296 640c76-57 140-67 208-26 47-29 103-35 155-11 26 12 48 25 69 45v176H296z" fill="#9DB5A2"/>
+  <path d="M296 704c74-36 143-38 214-8 76-41 147-37 218 12v116H296z" fill="#58796B"/>
+
+  <!-- A short, straight path keeps the mark calm and legible at small sizes. -->
+  <path d="M500 625h24l83 199H417z" fill="#F1EBDD"/>
+</svg>

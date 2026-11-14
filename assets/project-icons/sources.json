@@ -49,9 +49,13 @@
       "sameBlobAs": "Luma Pulse Sender"
     },
     "KurzMa": {
-      "file": null,
+      "file": "kurzma-draft.svg",
       "repository": "jorgodivazzi/KurzMa",
-      "status": "Repository ist leer; finales Logo noch nicht vorhanden."
+      "revision": "740e1353302260b4cbad198261e223c311c18d09",
+      "source": "BrandAssets/KurzMa-AppIcon-DRAFT.svg",
+      "sourceBlobSha": "b9ff93604f9870a7987f3ef107cfa49927f0efcc",
+      "status": "Draft – vorläufiger Logo-Entwurf, nicht final",
+      "visibleLabel": "Logo-Entwurf"
     }
   }
 }
